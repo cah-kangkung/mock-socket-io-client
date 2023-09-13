@@ -73,6 +73,8 @@ formLogin.addEventListener('submit', async (event) => {
     console.log('Notif masuk');
   })
 
+  // disable these socket listener line below if you wanted to reproduce
+  // negative case 
   socket.on('print-invoice', (data, callback) => {
     console.log('Print Invoice');
     callback({ isReceived: true })
